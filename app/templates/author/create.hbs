@@ -1,0 +1,46 @@
+<div class="slide-out-bg"></div>
+<div class="slide-out">
+    <div class="slide-out-card">
+        {{#link-to "author" class="btn-back"}}
+            <span class="sr-only">Back</span>
+        {{/link-to}}
+
+        <div class="slide-out-heading">
+            <div class="title">
+                <h3>New Author</h3>
+            </div>
+        </div>
+
+        <div class="slide-out-content">
+            <form>
+                <div class="field">
+                    <label>First Name: {{first}}</label>
+                    <input 
+                    type="text" 
+                    value="{{first}}"
+                    placeholder="First Name" 
+                    oninput={{action "changeFirst" value="target.value"}}
+                    >
+                </div>
+
+                <div class="field">
+                    <label>Last Name: {{last}}</label>
+                    <input 
+                    type="text" 
+                    value="{{last}}"
+                    placeholder="Last Name" 
+                    oninput={{action (mut last) value="target.value"}}>
+                </div>
+
+                <div class="field">
+                    <label>Last Name: {{last}}</label>
+                    {{input 
+                    type="text" 
+                    placeholder="Last Name" 
+                    value=last 
+                    }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
