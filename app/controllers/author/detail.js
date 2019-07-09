@@ -3,9 +3,10 @@ import Controller from '@ember/controller';
 export default Controller.extend({
     actions: {
         deleteAuthor(author){
-            console.log(author);
-
-            window.alert('Delete Author');
+            author.destroyRecord().then(() => {
+                // Similar to link-to component.
+                this.transitionToRoute('author.index');
+            });
         }
     }
 });
