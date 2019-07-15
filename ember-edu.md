@@ -230,4 +230,33 @@ public class AuthorsController : JsonApiController<Author>
             }}
         </div>
         ```
+## Day 5. 
++ Clearing data on route start.
+    + Reset single param via base method: 
+    ```js
+        resetController(controller){
+        this._super(...arguments);
 
+        controller.set('first', '');
+        controller.set('last', '');
+    }
+    ```
+    + Reset multiple params via custom method:
+     ```js
+        reset(){
+        this.setProperties({
+            first: '',
+            last: ''
+        });
+    },
+    ```
+    + Reset by passing an empty model as controller method: 
+    ```js
+     model(){
+        return {
+            first: '',
+            last: '',
+        };
+    }
+    ```
+    
