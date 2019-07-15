@@ -272,4 +272,8 @@ public class AuthorsController : JsonApiController<Author>
             });
         }
     ```
++ Preventing ambiguous routes: 
+    ```js
+    this.route('edit', { path: '/:id/edit' });
+    ```
     
