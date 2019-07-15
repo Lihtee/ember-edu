@@ -259,4 +259,17 @@ public class AuthorsController : JsonApiController<Author>
         };
     }
     ```
++ Saving new object in onsasve event:
+    ```js
+        saveAuthor(ev){
+            ev.preventDefault();
+
+            let author = this.store.createRecord('author', this.model);
+
+            author.save()
+            .then(() => {
+                this.transitionToRoute('author');
+            });
+        }
+    ```
     
