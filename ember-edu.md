@@ -276,4 +276,19 @@ public class AuthorsController : JsonApiController<Author>
     ```js
     this.route('edit', { path: '/:id/edit' });
     ```
-    
++ Decoupling something from model in component: 
+    ```js
+    didReceiveAttrs() {
+        this._super(...arguments);
+
+        this.setProperties({
+            first: this.author.get('first'),
+            last: this.author.get('last')
+        });
+    },        
+    ```
++ Set all values in controller:
+    ```js
+        this.model.setProperties(formValues);
+    ```
+
