@@ -8,7 +8,7 @@ ___
 6. cmd: dotnet new webapi
 7. cmd: dotnet run // similar to start without debugging: change code => shutdown => rebuild => launch
 8. cmd: dotnet add package Microsoft.Dotnet.Watcher.Tools
-9. cmd: dotnet run watcher // track changes and automaticaly apply them to running server.
+9. cmd: dotnet watch run  // track changes and automaticaly apply them to running server.
 
 ## Day 2
 ___
